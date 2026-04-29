@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B Testing at Udacity — Cindy Waweru</title>
+<meta name="description" content="Experimental design and A/B testing in R to evaluate a product change at Udacity. Statistical significance, hypothesis testing, and a do-not-launch recommendation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html"    class="nav__link">Home</a>
+      <a href="about.html"    class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html"   class="nav__link">Skills</a>
+      <a href="contact.html"  class="nav__link">Contact</a>
+    </div>
+    <button class="nav__ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="about.html" class="nav__link">About</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="projects.html" class="nav__link">Projects</a>
+  <a href="skills.html" class="nav__link">Skills</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+</div>
+
+<div class="detail-hero">
+  <div class="wrap">
+    <a href="projects.html" class="bc load-in">Back to Projects</a>
+    <div class="detail-hero__tags load-in"><span class="badge badge-cat">Data Analytics</span><span class="badge badge-tool">R</span><span class="badge badge-tool">Hypothesis Testing</span><span class="badge badge-tool">Power Analysis</span></div>
+    <h1 class="load-in">Reducing Enrollment Drop-Off: A/B Testing at Udacity</h1>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="detail-body">
+
+      <div class="project-main">
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Problem</div>
+          <p>Udacity wanted to test a proposed product change: displaying a time-commitment warning to prospective students before they enrolled in a free trial. The hypothesis was that this filter would reduce early drop-offs without harming the number of students who ultimately pay. The question was whether to launch.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Approach</div>
+          <p>I designed the experiment with properly specified metrics before looking at any results — the single most important discipline in A/B testing. The metrics were: <strong>gross conversion</strong> (did the change reduce free trial sign-ups?), <strong>retention</strong> (of those who signed up, did completion rates improve?), and <strong>net conversion</strong> (did the proportion who ultimately paid hold steady or improve?).</p><p>I determined the required sample size using statistical power calculations at 80% power and 5% significance, ran two-tailed hypothesis tests with 95% confidence intervals, and checked for <em>practical significance</em> as well as statistical significance — because a result can be statistically real but too small to justify the cost of launching.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Key Findings</div>
+          <div class="findings">
+            <div class="finding"><p>Gross conversion <strong>decreased significantly</strong> in the test group — the warning did filter out students unlikely to complete, as hypothesised.</p></div>
+<div class="finding"><p>Net conversion showed <strong>no statistically significant improvement</strong> — the students who remained after seeing the warning did not pay at a meaningfully higher rate than the control group.</p></div>
+<div class="finding"><p>The retention metric <strong>could not be reliably evaluated</strong> within the experiment window — the required sample size to achieve adequate statistical power was impractically large.</p></div>
+          </div>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Impact</div>
+          <p>The recommendation was <strong>do not launch</strong> in the current form. The change reduced enrollments without a corresponding improvement in payments — a net negative business outcome. This is a case where rigorous analysis prevented a costly mistake rather than enabling a win.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">What I Learned</div>
+          <div class="reflection"><p>A/B testing is as much about knowing what not to build as what to build. The discipline of specifying primary and secondary metrics — and their success thresholds — before seeing any results is what keeps analysis honest. If you define success after the fact, you can always find it. The Udacity experiment was valuable precisely because it returned a clear no.</p></div>
+        </div>
+        <div class="reveal" style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://medium.com/@cindy.w.waweru/optimizing-student-retention-with-a-b-testing-at-udacity-d9f85f256853" target="_blank" rel="noopener" class="btn btn-green">Read full article on Medium →</a>
+          
+        </div>
+      </div>
+
+      <div class="proj-sidebar">
+        <div class="s-card reveal">
+          <div class="s-card__title">Project details</div>
+          <div class="s-row"><span>Category</span><span>Data Analytics</span></div>
+<div class="s-row"><span>Year</span><span>2024</span></div>
+<div class="s-row"><span>Status</span><span>Completed</span></div>
+<div class="s-row"><span>Recommendation</span><span>Do not launch</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-card__title">Tools used</div>
+          <div class="tags" style="margin-top:4px"><span class="badge badge-tool">R</span> <span class="badge badge-tool">Hypothesis Testing</span> <span class="badge badge-tool">Confidence Intervals</span> <span class="badge badge-tool">Power Analysis</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-big"><div class="stat-num">95%</div><p>Confidence Intervals Applied</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst · Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru"  target="_blank" rel="noopener" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">cindy.w.waweru@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2025 Cindy Waweru</span>
+      <span class="footer__copy">Built on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

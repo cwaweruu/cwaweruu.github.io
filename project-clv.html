@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Lifetime Value Analysis — Cindy Waweru</title>
+<meta name="description" content="CLV analysis in BigQuery SQL. Calculated AOV, purchase frequency and customer lifetime value to justify e-commerce acquisition costs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html"    class="nav__link">Home</a>
+      <a href="about.html"    class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html"   class="nav__link">Skills</a>
+      <a href="contact.html"  class="nav__link">Contact</a>
+    </div>
+    <button class="nav__ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="about.html" class="nav__link">About</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="projects.html" class="nav__link">Projects</a>
+  <a href="skills.html" class="nav__link">Skills</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+</div>
+
+<div class="detail-hero">
+  <div class="wrap">
+    <a href="projects.html" class="bc load-in">Back to Projects</a>
+    <div class="detail-hero__tags load-in"><span class="badge badge-cat">Data Analytics</span><span class="badge badge-tool">SQL</span><span class="badge badge-tool">BigQuery</span></div>
+    <h1 class="load-in">Customer Lifetime Value Analysis in E-Commerce</h1>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="detail-body">
+
+      <div class="project-main">
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Problem</div>
+          <p>A fast-growing e-commerce business had been relying on third-party tools to understand user behaviour. As the company scaled, those tools were no longer sufficient. The core business question was concrete: was the $2 per customer marketing acquisition cost actually justified? Without a rigorous CLV framework, there was no way to answer that with confidence — only instinct.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Approach</div>
+          <p>Working with a parsed events table (<code>raw_events</code>) containing front-end user actions from November 2020 to January 2021, I filtered purchase events and used <code>user_pseudo_id</code> as the unique customer identifier. I built a BigQuery SQL framework using CTEs and window functions to calculate a sequential chain of metrics:</p><p><strong>Average Order Value (AOV)</strong> → <strong>Purchase Frequency (PF)</strong> → <strong>Customer Value</strong> → <strong>Customer Lifetime Value (CLV)</strong>, where CLV was derived as Customer Value multiplied by a 3-year assumed lifespan — documented explicitly as a parameter, not hardcoded, so the business could update it independently.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Key Findings</div>
+          <div class="findings">
+            <div class="finding"><p>The average CLV was <strong>$2,950.43</strong> — confirming the $2 acquisition cost was not just justified but represented an extraordinary return on investment of over 1,400×.</p></div>
+<div class="finding"><p>Purchase frequency analysis revealed which <strong>customer segments warranted higher re-engagement spend</strong>, separating high-value loyalists from one-time buyers with meaningfully different long-term profiles.</p></div>
+<div class="finding"><p>AOV and frequency together enabled <strong>value-based segmentation</strong> that third-party summaries could not provide — giving the marketing team a defensible, reproducible framework for budget allocation.</p></div>
+          </div>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Impact</div>
+          <p>The analysis gave the marketing team a quantified, reproducible framework for acquisition spend decisions. The CLV calculation was also set up as a reusable SQL model so the business could run it against updated data each quarter without rebuilding the logic from scratch.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">What I Learned</div>
+          <div class="reflection"><p>The most important step in CLV analysis is agreeing on the definition of 'lifetime' before writing any SQL. Using different assumptions changes the output dramatically. For this project I used 3 years, but I would always make that a documented parameter rather than a hardcoded value in future work — so the business can own and update the assumption rather than inheriting mine.</p></div>
+        </div>
+        <div class="reveal" style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://medium.com/@cindy.w.waweru/calculating-customer-lifetime-value-clv-in-e-commerce-using-bigquery-83b207f3561b" target="_blank" rel="noopener" class="btn btn-green">Read full article on Medium →</a>
+          
+        </div>
+      </div>
+
+      <div class="proj-sidebar">
+        <div class="s-card reveal">
+          <div class="s-card__title">Project details</div>
+          <div class="s-row"><span>Category</span><span>Data Analytics</span></div>
+<div class="s-row"><span>Year</span><span>2024</span></div>
+<div class="s-row"><span>Status</span><span>Completed</span></div>
+<div class="s-row"><span>Platform</span><span>Medium</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-card__title">Tools used</div>
+          <div class="tags" style="margin-top:4px"><span class="badge badge-tool">SQL</span> <span class="badge badge-tool">BigQuery</span> <span class="badge badge-tool">CTEs</span> <span class="badge badge-tool">Window Functions</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-big"><div class="stat-num">$2,950</div><p>Average Customer Lifetime Value</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst · Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru"  target="_blank" rel="noopener" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">cindy.w.waweru@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2025 Cindy Waweru</span>
+      <span class="footer__copy">Built on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
