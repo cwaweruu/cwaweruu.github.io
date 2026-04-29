@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Cohort Analysis — Cindy Waweru</title>
+  <meta name="description" content="Weekly retention cohort analysis for a subscription platform. SQL-based cohort tracking reveals critical churn points invisible to monthly metrics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-offset">
+  <nav class="nav"><div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a><a href="about.html" class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a><a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a><a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div></nav>
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__link">Home</a><a href="about.html" class="nav__link">About</a>
+    <a href="research.html" class="nav__link">Research</a><a href="projects.html" class="nav__link">Projects</a>
+    <a href="skills.html" class="nav__link">Skills</a><a href="contact.html" class="nav__link">Contact</a>
+  </div>
+
+  <div class="project-detail__hero">
+    <div class="project-detail__hero-inner">
+      <a href="projects.html" class="breadcrumb">Back to Projects</a>
+      <div class="project-detail__hero-meta">
+        <span class="badge badge-category">Data Analytics</span>
+        <span class="badge badge-tool">SQL</span>
+        <span class="badge badge-tool">Cohort Analysis</span>
+      </div>
+      <h1>Weekly Retention Cohort Analysis for a Subscription Platform</h1>
+    </div>
+  </div>
+
+  <div class="project-detail">
+    <div class="project-detail__inner">
+      <div class="project-main">
+
+        <div class="content-section reveal">
+          <h3>The Problem</h3>
+          <p>A subscription-based business was monitoring retention with traditional monthly metrics. The problem: monthly aggregates were masking short-term churn patterns that, by the time they appeared in monthly reports, were already too late to address. If a cohort starts falling apart in week one, you will not see it in your monthly numbers until next month — when most of those subscribers are already gone.</p>
+          <p>The goal was to build a weekly cohort framework that surfaces intervention opportunities while they still exist.</p>
+        </div>
+
+        <div class="content-section reveal">
+          <h3>The Approach</h3>
+          <p>I extracted data from <code>turing_data_analytics.subscriptions</code>, which contains detailed subscriber start and activity dates. I grouped users by their subscription start week — their "cohort" — and tracked how many remained active at weeks 1, 2, 3, 4, 5, and 6 after joining.</p>
+          <p>The cohort table was built in SQL and retention rates were calculated as a percentage of each cohort's starting size. This normalisation is critical: it allows direct comparison across cohorts regardless of absolute size differences, so a cohort of 200 and a cohort of 50 can be meaningfully compared on the same chart.</p>
+          <p>The final output was a retention matrix — cohorts as rows, weeks as columns, retention rate as each cell — designed to be read visually and acted on operationally.</p>
+        </div>
+
+        <div class="content-section reveal">
+          <h3>Key Findings</h3>
+          <div class="finding-list">
+            <div class="finding-item">
+              <p>The sharpest drop in retention occurred between <strong>Week 0 and Week 1</strong> across nearly all cohorts — indicating an onboarding or early-value problem, not a long-term engagement problem.</p>
+            </div>
+            <div class="finding-item">
+              <p>Retention <strong>stabilised from Week 3 onwards</strong> for most cohorts, suggesting that subscribers who survived the first two weeks had substantially higher long-term value and should be treated as a distinct segment.</p>
+            </div>
+            <div class="finding-item">
+              <p>One cohort showed an <strong>anomalously high Week 2 drop</strong> that could not be explained by seasonal patterns — pointing to a specific product or external event worth investigating independently.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section reveal">
+          <h3>Impact</h3>
+          <p>By making weekly churn visible at the cohort level, the analysis shifted the business's intervention strategy from reactive (responding to monthly churn reports) to proactive (targeting Week 0–1 with improved onboarding). The actionable window for retention is during the first two weeks — not after month-end reports arrive.</p>
+          <p>The analysis also reframed the retention goal: instead of "how do we reduce churn overall," the question became "how do we get more subscribers from Week 0 to Week 3" — a far more tractable and measurable objective.</p>
+        </div>
+
+        <div class="content-section reveal">
+          <h3>What I Learned</h3>
+          <div class="reflection">
+            <p>"Cohort analysis is only as useful as the cohort definition. I chose subscription start week, but the cohort could also be defined by first purchase, first login, or first meaningful in-product action — depending on what 'activation' means for the business. The choice of cohort definition is the most consequential analytical decision in the entire project. It determines what story you can and cannot tell."</p>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top:var(--space-6)">
+          <a href="https://medium.com/@cindy.w.waweru/retention-cohorts-churn-483d8d75f5c2" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read full article on Medium →</a>
+        </div>
+      </div>
+
+      <div class="project-sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Project details</h4>
+          <div class="sidebar-detail"><span>Category</span><span>Data Analytics</span></div>
+          <div class="sidebar-detail"><span>Year</span><span>2024</span></div>
+          <div class="sidebar-detail"><span>Status</span><span>Completed</span></div>
+          <div class="sidebar-detail"><span>Method</span><span>Cohort Analysis</span></div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Tools used</h4>
+          <div class="tags" style="margin-top:4px">
+            <span class="badge badge-tool">SQL</span>
+            <span class="badge badge-tool">BigQuery</span>
+            <span class="badge badge-tool">Cohort Analysis</span>
+            <span class="badge badge-tool">Retention Metrics</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Tracking window</h4>
+          <div style="text-align:center;padding:var(--space-3) 0">
+            <div style="font-family:var(--font-serif);font-size:2.5rem;color:var(--color-primary);line-height:1">6</div>
+            <div class="label" style="margin-top:8px">Weeks tracked per cohort</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst<br>Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru" target="_blank" rel="noopener noreferrer" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">Email</a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy">© 2025 Cindy Waweru · Built on GitHub Pages</span>
+      <span class="footer__copy">cindy.w.waweru@gmail.com</span>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

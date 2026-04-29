@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Cindy Waweru</title>
+  <meta name="description" content="Data analytics and policy research projects: CLV analysis in BigQuery, A/B testing in R, subscription cohort analysis, HR analytics in Power BI, and EU policy modelling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="page-offset">
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Cindy Waweru</a>
+      <div class="nav__links">
+        <a href="index.html"    class="nav__link">Home</a>
+        <a href="about.html"    class="nav__link">About</a>
+        <a href="research.html" class="nav__link">Research</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="skills.html"   class="nav__link">Skills</a>
+        <a href="contact.html"  class="nav__link">Contact</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html"    class="nav__link">Home</a>
+    <a href="about.html"    class="nav__link">About</a>
+    <a href="research.html" class="nav__link">Research</a>
+    <a href="projects.html" class="nav__link">Projects</a>
+    <a href="skills.html"   class="nav__link">Skills</a>
+    <a href="contact.html"  class="nav__link">Contact</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label anim-item">Projects &amp; Case Studies</span>
+      <h1 class="anim-item">Analysis built to inform decisions</h1>
+      <p class="anim-item">A mix of applied analytics projects and EU policy work. Each case study follows the same structure: problem, approach, tools, findings, and impact.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Policy &amp; Governance">Policy &amp; Governance</button>
+        <button class="filter-btn" data-filter="Data Analytics">Data Analytics</button>
+        <button class="filter-btn" data-filter="Business Intelligence">Business Intelligence</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid stagger-group">
+
+        <!-- CLV -->
+        <div class="project-card reveal" data-category="Data Analytics">
+          <div class="project-card__thumb" style="background:#0A5C47">CLV</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Data Analytics</span>
+            </div>
+            <h3>Customer Lifetime Value Analysis in E-Commerce</h3>
+            <p class="project-card__desc">Calculated CLV, AOV, and purchase frequency to determine whether a $2/customer acquisition cost was justified — it was, by a factor of over 1,400.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">SQL</span>
+              <span class="badge badge-tool">BigQuery</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-clv.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- A/B Testing -->
+        <div class="project-card reveal" data-category="Data Analytics">
+          <div class="project-card__thumb" style="background:#C47A1E">A/B</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Data Analytics</span>
+            </div>
+            <h3>Reducing Enrollment Drop-Off: A/B Testing at Udacity</h3>
+            <p class="project-card__desc">Designed and analysed an experiment to evaluate a product change — produced a clear do-not-launch recommendation backed by statistical and business significance testing.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">R</span>
+              <span class="badge badge-tool">Statistics</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-ab-testing.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cohort Analysis -->
+        <div class="project-card reveal" data-category="Data Analytics">
+          <div class="project-card__thumb" style="background:#3B5F8C">CH</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Data Analytics</span>
+            </div>
+            <h3>Weekly Retention Cohort Analysis for a Subscription Platform</h3>
+            <p class="project-card__desc">Weekly cohort tracking revealed critical churn points invisible to monthly metrics — enabling earlier, more targeted intervention strategies.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">SQL</span>
+              <span class="badge badge-tool">Cohort Analysis</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-cohort.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HR Analytics -->
+        <div class="project-card reveal" data-category="Business Intelligence">
+          <div class="project-card__thumb" style="background:#6B3A7D">HR</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Business Intelligence</span>
+            </div>
+            <h3>Empowering C-Suite Decisions with HR Analytics</h3>
+            <p class="project-card__desc">Built an executive-level HR dashboard for 290 employees, surfacing workforce imbalances, pay gaps, and hiring trends for senior leadership decisions.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">Power BI</span>
+              <span class="badge badge-tool">DAX</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-hr-analytics.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sales Power BI -->
+        <div class="project-card reveal" data-category="Business Intelligence">
+          <div class="project-card__thumb" style="background:#2A7A3B">BI</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Business Intelligence</span>
+            </div>
+            <h3>Regional Revenue &amp; Market Performance Dashboard</h3>
+            <p class="project-card__desc">Visualised revenue, market penetration, and growth KPIs across multiple regions — identifying underperforming markets and high-ROI reallocation opportunities.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">Power BI</span>
+              <span class="badge badge-tool">DAX</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-sales-powerbi.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Just Transition -->
+        <div class="project-card reveal" data-category="Policy &amp; Governance">
+          <div class="project-card__thumb" style="background:#1A5C75">JT</div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="badge badge-category">Policy &amp; Governance</span>
+            </div>
+            <h3>Forecasting Employment Risk Under EU Green Transition Policy</h3>
+            <p class="project-card__desc">Modelled EU-wide employment and poverty outcomes to 2045 under three Just Transition Directive scenarios — published by the EESC.</p>
+            <div class="project-card__tools tags">
+              <span class="badge badge-tool">Python</span>
+              <span class="badge badge-tool">Econometric Modelling</span>
+            </div>
+            <div class="project-card__footer">
+              <a href="project-just-transition.html" class="text-link">View case study →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h3>Cindy Waweru</h3>
+        <p>Policy Researcher &amp; Data Analyst<br>Vilnius, Lithuania</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru" target="_blank" rel="noopener noreferrer" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">Email</a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy">© 2025 Cindy Waweru · Built on GitHub Pages</span>
+      <span class="footer__copy">cindy.w.waweru@gmail.com</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
