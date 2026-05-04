@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Fair AI Has to Be Built Into Agile Workflows — Cindy Waweru</title>
+<meta name="description" content="Practical framework for embedding AI fairness checks, gates, and accountability into agile sprint cycles so fairness becomes part of development rather than a post-hoc review.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <button class="nav__ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="about.html" class="nav__link">About</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="projects.html" class="nav__link">Projects</a>
+  <a href="skills.html" class="nav__link">Skills</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+</div>
+<div class="detail-hero">
+  <div class="wrap">
+    <a href="projects.html" class="bc load-in">Back to Projects</a>
+    <div class="detail-hero__tags load-in"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Agile</span><span class="badge badge-tool">AI Governance</span><span class="badge badge-tool">Process Design</span><span class="badge badge-tool">Sprint Integration</span></div>
+    <h1 class="load-in">Why Fair AI Has to Be Built Into Agile Workflows</h1>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="detail-body">
+      <div class="project-main">
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Problem</div>
+          <p>It started with a question no one could answer. In a client demo room, a diversity officer at a European financial institution asked a straightforward question about a deployed hiring algorithm: "Can you tell me which demographic groups were affected by the last model update?" No one in the room could answer it. Not because the data did not exist, but because fairness had never been part of the sprint cycle. Nobody had defined what to measure, when to measure it, or who was responsible for the answer.</p><p>This is the core problem the article addresses: fairness treated as a post-hoc review rather than a development practice will always arrive too late.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Approach</div>
+          <p>The article makes the case that AI fairness needs to be embedded in agile workflows the same way security and accessibility requirements are: as acceptance criteria, not afterthoughts. I mapped the sprint cycle to identify the specific moments where fairness work belongs, and what form it should take at each stage.</p><p>The framework covers: defining fairness requirements during sprint planning (which groups, which metrics, which thresholds); embedding bias checks as part of the definition of done for data and model work; adding fairness gates to pull request reviews; and including fairness metrics in sprint retrospectives. It also addresses the organisational question of who owns fairness accountability within a cross-functional team.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Key Findings</div>
+          <div class="findings"><div class="finding"><p>Fairness requirements defined at sprint planning <strong>survive under deadline pressure far better</strong> than fairness reviews scheduled after deployment, because they are part of the delivery contract rather than optional additions.</p></div>
+<div class="finding"><p><strong>Fairness gates in pull requests</strong>, analogous to automated test failures, create accountability without requiring a separate audit process and catch regressions before they reach production.</p></div>
+<div class="finding"><p>Retrospective fairness metrics <strong>build institutional memory about which types of changes tend to introduce disparities</strong>, enabling teams to anticipate problems rather than only react to them.</p></div></div>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Impact</div>
+          <p>The framework is directly applicable to any team building AI systems using agile methods, which is most teams. By translating fairness requirements into the language of sprint ceremonies, acceptance criteria, and definition of done, it makes fairness governance legible to engineers and product managers who may not have a background in ethics or statistics.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">What I Learned</div>
+          <div class="reflection"><p>Fairness governance fails when it is owned by one person or team instead of being distributed across the development process. The most effective thing you can do is make fairness somebody else's job, meaning make it everyone's job, by building it into the process rather than delegating it to a specialist reviewer at the end.</p></div>
+        </div>
+        <div class="reveal" style="margin-top:40px">
+          <a href="https://medium.com/@cindy.w.waweru/why-fair-ai-has-to-be-built-into-agile-workflows-ff55b06ba208" target="_blank" rel="noopener" class="btn btn-green">Read full article on Medium →</a>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="s-card reveal">
+          <div class="s-card__title">Project details</div>
+          <div class="s-row"><span>Category</span><span>AI Ethics</span></div>
+          <div class="s-row"><span>Year</span><span>2026</span></div>
+          <div class="s-row"><span>Status</span><span>Published</span></div>
+          <div class="s-row"><span>Platform</span><span>Medium</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-card__title">Tools &amp; concepts</div>
+          <div class="tags" style="margin-top:4px"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Agile</span><span class="badge badge-tool">AI Governance</span><span class="badge badge-tool">Process Design</span><span class="badge badge-tool">Sprint Integration</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst · Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru" target="_blank" rel="noopener" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">cindy.w.waweru@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Cindy Waweru</span>
+      <span class="footer__copy">Built on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

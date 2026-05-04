@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You Found Bias in Your AI System. Now What? — Cindy Waweru</title>
+<meta name="description" content="Practical intervention playbook for diagnosing AI bias and implementing targeted fixes across the ML pipeline, from data preprocessing to post-deployment monitoring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <button class="nav__ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="about.html" class="nav__link">About</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="projects.html" class="nav__link">Projects</a>
+  <a href="skills.html" class="nav__link">Skills</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+</div>
+<div class="detail-hero">
+  <div class="wrap">
+    <a href="projects.html" class="bc load-in">Back to Projects</a>
+    <div class="detail-hero__tags load-in"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Python</span><span class="badge badge-tool">Bias Mitigation</span><span class="badge badge-tool">Pre-processing</span><span class="badge badge-tool">Post-processing</span></div>
+    <h1 class="load-in">You Found Bias in Your AI System. Now What? A Practical Intervention Playbook</h1>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="detail-body">
+      <div class="project-main">
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Problem</div>
+          <p>Most guidance on AI fairness focuses on how to detect bias. Very little focuses on what to do once you have found it. The gap is significant: teams that identify a fairness problem often stall because the path from "we have measured a disparity" to "we have fixed it responsibly" is not documented anywhere they can find.</p><p>This project addresses the intervention question directly: given a diagnosed bias problem, what are the available technical options, when should each be used, and what trade-offs does each introduce?</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Approach</div>
+          <p>I built a structured intervention playbook organised around three stages of the ML pipeline where bias can be addressed: pre-processing (modifying training data before model training), in-processing (modifying the training objective), and post-processing (adjusting model outputs after prediction).</p><p>For each stage, the playbook documents: the types of bias each intervention targets, the fairness metrics it affects, the accuracy trade-offs it introduces, and the conditions under which it is and is not appropriate. The playbook also includes a diagnostic decision tree to help practitioners navigate from a measured disparity to a recommended intervention class.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Key Findings</div>
+          <div class="findings"><div class="finding"><p>Pre-processing interventions are the <strong>most transferable across model types</strong> but require access to training data and carry the risk of over-correcting in ways that introduce new disparities for unprotected groups.</p></div>
+<div class="finding"><p>Post-processing interventions are <strong>easiest to implement in deployed systems</strong> without retraining, but they operate on outputs rather than causes and can mask underlying problems rather than resolve them.</p></div>
+<div class="finding"><p>In all cases, <strong>a bias intervention that improves one fairness metric will often worsen another</strong>. Making this trade-off explicit and intentional is the core of responsible intervention design.</p></div></div>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Impact</div>
+          <p>The playbook provides a practical decision framework for data teams facing real fairness problems under real time and resource constraints. By organising interventions by pipeline stage and making trade-offs explicit, it helps teams choose interventions that match both their technical constraints and their normative priorities.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">What I Learned</div>
+          <div class="reflection"><p>The most common mistake in bias mitigation is treating it as a purely technical problem. Every intervention embeds a value judgement about which group's outcomes matter more, and those judgements need to be made explicitly by people with domain and ethical knowledge, not implicitly by whoever wrote the correction code.</p></div>
+        </div>
+        <div class="reveal" style="margin-top:40px">
+          <a href="https://medium.com/@cindy.w.waweru/you-found-bias-in-your-ai-system-now-what-a-practical-intervention-playbook-3ac67c46e83b" target="_blank" rel="noopener" class="btn btn-green">Read full article on Medium →</a>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="s-card reveal">
+          <div class="s-card__title">Project details</div>
+          <div class="s-row"><span>Category</span><span>AI Ethics</span></div>
+          <div class="s-row"><span>Year</span><span>2026</span></div>
+          <div class="s-row"><span>Status</span><span>Published</span></div>
+          <div class="s-row"><span>Platform</span><span>Medium</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-card__title">Tools &amp; concepts</div>
+          <div class="tags" style="margin-top:4px"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Python</span><span class="badge badge-tool">Bias Mitigation</span><span class="badge badge-tool">Pre-processing</span><span class="badge badge-tool">Post-processing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst · Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru" target="_blank" rel="noopener" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">cindy.w.waweru@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Cindy Waweru</span>
+      <span class="footer__copy">Built on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Fairness Pipeline That Runs With One Command — Cindy Waweru</title>
+<meta name="description" content="End-to-end automated fairness pipeline for ML systems. Detects bias, applies interventions, and generates reports in a single command.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Cindy Waweru</a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="research.html" class="nav__link">Research</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <button class="nav__ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="about.html" class="nav__link">About</a>
+  <a href="research.html" class="nav__link">Research</a>
+  <a href="projects.html" class="nav__link">Projects</a>
+  <a href="skills.html" class="nav__link">Skills</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+</div>
+<div class="detail-hero">
+  <div class="wrap">
+    <a href="projects.html" class="bc load-in">Back to Projects</a>
+    <div class="detail-hero__tags load-in"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Python</span><span class="badge badge-tool">Fairness Metrics</span><span class="badge badge-tool">MLOps</span></div>
+    <h1 class="load-in">A Fairness Pipeline That Runs With One Command</h1>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="detail-body">
+      <div class="project-main">
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Problem</div>
+          <p>Most teams building AI systems end up collecting the same disconnected toolkit: something to detect bias in data, something to clean it, something to evaluate post-deployment. These tools exist in isolation, require separate configuration, and depend on individual engineers remembering to run them at the right moment. The result is fairness work that is performed inconsistently or skipped under deadline pressure.</p><p>The problem this project addressed: how do you make fairness evaluation as frictionless as running a test suite?</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">The Approach</div>
+          <p>I built an end-to-end fairness pipeline as a single callable Python module. The pipeline chains three stages: bias detection on the input data using demographic parity and equalised odds metrics; a configurable intervention layer that applies pre-processing or post-processing corrections depending on the detected bias type; and a reporting module that outputs a structured fairness report with metrics, thresholds, and flags.</p><p>The whole pipeline runs with one command and accepts a config file that specifies the protected attributes, target variable, fairness thresholds, and preferred intervention strategy. This means a team can integrate it into a CI/CD pipeline as a fairness gate without writing any additional code.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Key Findings</div>
+          <div class="findings"><div class="finding"><p>A single-command interface <strong>reduces the activation energy for fairness evaluation</strong> to near zero, making it feasible to run on every model update rather than as a periodic audit.</p></div>
+<div class="finding"><p>The configurable threshold system allows teams to <strong>set fairness standards appropriate to their deployment context</strong>, acknowledging that different use cases carry different risk profiles.</p></div>
+<div class="finding"><p>Chaining detection, intervention, and reporting in one pipeline <strong>surfaces trade-offs between fairness metrics and model accuracy</strong> that are invisible when these steps are performed separately.</p></div></div>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">Impact</div>
+          <p>The pipeline is designed to be dropped into any Python-based ML project without restructuring existing code. By making fairness evaluation a one-line operation, it shifts the default from opt-in to opt-out, which is where fairness tooling needs to be to actually change practice.</p>
+        </div>
+        <div class="cs-sec reveal">
+          <div class="cs-sec__label">What I Learned</div>
+          <div class="reflection"><p>The hardest part of building fairness tooling is not the metrics, it is the interface design. A technically correct fairness audit that requires significant setup will be skipped. A simpler one that runs automatically will be used. The lesson is that fairness in practice is as much a question of workflow design as it is of algorithmic correctness.</p></div>
+        </div>
+        <div class="reveal" style="margin-top:40px">
+          <a href="https://medium.com/@cindy.w.waweru/i-built-a-fairness-pipeline-that-runs-with-one-command-here-is-how-8a03f478b150" target="_blank" rel="noopener" class="btn btn-green">Read full article on Medium →</a>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="s-card reveal">
+          <div class="s-card__title">Project details</div>
+          <div class="s-row"><span>Category</span><span>AI Ethics</span></div>
+          <div class="s-row"><span>Year</span><span>2026</span></div>
+          <div class="s-row"><span>Status</span><span>Published</span></div>
+          <div class="s-row"><span>Platform</span><span>Medium</span></div>
+        </div>
+        <div class="s-card reveal">
+          <div class="s-card__title">Tools &amp; concepts</div>
+          <div class="tags" style="margin-top:4px"><span class="badge badge-cat">AI Ethics</span><span class="badge badge-tool">Python</span><span class="badge badge-tool">Fairness Metrics</span><span class="badge badge-tool">MLOps</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><h3>Cindy Waweru</h3><p>Policy Researcher &amp; Data Analyst · Vilnius, Lithuania</p></div>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/cindywaweru" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+        <a href="https://medium.com/@cindy.w.waweru" target="_blank" rel="noopener" class="footer__link">Medium</a>
+        <a href="mailto:cindy.w.waweru@gmail.com" class="footer__link">cindy.w.waweru@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Cindy Waweru</span>
+      <span class="footer__copy">Built on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
