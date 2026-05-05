@@ -1,4 +1,4 @@
-# Cindy Waweru — Portfolio Website
+# Cindy Waweru - Portfolio Website
 
 Built with plain HTML, CSS, and vanilla JS. No frameworks, no build tools. Works on GitHub Pages out of the box.
 
